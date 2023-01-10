@@ -1,8 +1,7 @@
 {
-  "name": "webpack-demo",
+  "name": "stalloyde-mobile-menu",
   "version": "1.0.0",
-  "description": "A template for my preferred webpack set up. New projects can start here",
-  "private": true,
+  "description": "Mobile menu",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
@@ -14,7 +13,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "keywords": [],
-  "author": "",
+  "author": "stalloyde",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.3",
@@ -41,10 +40,13 @@
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stalloyde/webpack-template.git"
+    "url": "git+https://github.com/Stalloyde/mobile-menu.git"
   },
   "bugs": {
-    "url": "https://github.com/Stalloyde/webpack-template/issues"
+    "url": "https://github.com/Stalloyde/mobile-menu/issues"
   },
-  "homepage": "https://github.com/Stalloyde/webpack-template#readme"
+  "homepage": "https://github.com/Stalloyde/mobile-menu#readme",
+  "dependencies": {
+    "stalloyde-menu": "^1.0.17"
+  }
 }

@@ -1,19 +1,29 @@
-import _ from "lodash";
-import printMe from "./print.js";
-import "./style.css";
+import _ from 'lodash';
+import { createDropDownMenu } from 'stalloyde-menu';
+import './style.css';
+import content1 from './item1';
+import content2 from './item2';
+import content3 from './item3';
+import content4 from './item4';
+import content5 from './item5';
+import content6 from './item6';
 
-function component() {
-  const element = document.createElement("div");
-  const btn = document.createElement("button");
+const menuItems = document.querySelectorAll('.menu-items');
+const contentContainer = document.querySelector('.content-container');
+const contents = { content1, content2, content3, content4, content5, content6 };
 
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+contentContainer.innerHTML = content1;
 
-  btn.innerHTML = "Click me and check the console!";
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  return element;
+function deselectItem() {
+  menuItems.forEach((item) => item.classList.remove('select'));
 }
 
-document.body.appendChild(component());
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    deselectItem();
+    contentContainer.innerHTML = contents[item.id] || 'ERROR';
+    item.classList.add('select');
+  });
+});
+
+createDropDownMenu();

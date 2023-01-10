@@ -1,3 +1,41 @@
-.test {
-  color: rgb(173, 173, 173);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
+
+footer::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  min-width: 100px;
+  padding: 10px;
+}
+
+.menu-items:hover {
+  cursor: pointer;
+}
+
+.content-container {
+  display: block;
+  height: fit-content;
+}
+
+.select {
+  background-color: blue;
 }
